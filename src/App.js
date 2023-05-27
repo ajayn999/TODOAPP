@@ -39,16 +39,16 @@ function App() {
   const numberComplete = tasks.filter(t => t.done).length;
   const numberTotal = tasks.length;
 
-  function getMessage() {
-    const percentage = numberComplete/numberTotal * 100;
-    if (percentage === 0) {
-      return 'Try to do at least one! 🙏';
-    }
-    if (percentage === 100) {
-      return 'Nice job for today! 🏝';
-    }
-    return 'Keep it going 💪🏻';
-  }
+//   function getMessage() {
+//     const percentage = numberComplete/numberTotal * 100;
+//     if (percentage === 0) {
+//       return 'Try to do at least one! 🙏';
+//     }
+//     if (percentage === 100) {
+//       return 'Nice job for today! 🏝';
+//     }
+//     return 'Keep it going 💪🏻';
+//   }
 
   function renameTask(index,newName) {
     setTasks(prev => {
@@ -60,8 +60,8 @@ function App() {
 
   return (
     <main>
-      <h1>{numberComplete}/{numberTotal} Complete</h1>
-      <h2>{getMessage()}</h2>
+          <h1>TODO APP</h1>
+      <h2>{numberComplete}/{numberTotal} Complete </h2>
       <TaskForm onAdd={addTask} />
       {tasks.map((task,index) => (
         <Task {...task}
